@@ -1,8 +1,8 @@
 # export vek_app=$(basename ${PWD})
-# export vek_docker_image=${vek_app}:dev
-# docker build --tag $(basename ${PWD}):dev --file Dockerfile .
-# docker run --rm -it -v ${PWD}:/vek -v ~/.aws:/root/.aws -v ~/.m2:/root/.m2 -v ~/.ssh:/root/.ssh -v ~/.gitconfig:/root/.gitconfig -v /var/run/docker.sock:/var/run/docker.sock -v ~/.kube:/root/.kube $(basename ${PWD}):dev [ commands ]
-# docker run --rm -it -v ${PWD}:/$(basename ${PWD}) -v ${PWD}/../vek-ftr-framework-lib:/vek-ftr-framework-lib -v ${PWD}/../cvd-android-sec:/cvd-android-sec --workdir /$(basename ${PWD}) $(basename ${PWD}):dev [ commands ]
+# export vek_docker_image=${vek_app}:local
+# docker build --tag $(basename ${PWD}):local --tag vekservicos/$(basename ${PWD}):latest --file Dockerfile .
+# docker run --rm -it -v ${PWD}:/vek -v ~/.aws:/root/.aws -v ~/.m2:/root/.m2 -v ~/.ssh:/root/.ssh -v ~/.gitconfig:/root/.gitconfig -v /var/run/docker.sock:/var/run/docker.sock -v ~/.kube:/root/.kube $(basename ${PWD}):local [ commands ]
+# docker run --rm -it -v ${PWD}:/$(basename ${PWD}) -v ${PWD}/../vek-ftr-framework-lib:/vek-ftr-framework-lib -v ${PWD}/../cvd-android-sec:/cvd-android-sec --workdir /$(basename ${PWD}) $(basename ${PWD}):local [ commands ]
 
 # FROM cirrusci/flutter:v1.12.13-hotfix.7
 FROM cirrusci/flutter:1.17.5
