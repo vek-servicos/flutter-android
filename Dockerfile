@@ -13,6 +13,7 @@ FROM cirrusci/flutter:1.17.5
 # ENV ANDROID_SDK_TOOLS_VERSION="6514223"
 # ENV ANDROID_SDK_TOOLS_VERSION="6609375"
 ENV FLUTTER_CHANNEL=stable
+ENV GRADLE_OPTS=-Dorg.gradle.daemon=false
 
 RUN echo "Set disable_coredump false" | sudo tee /etc/sudo.conf
 RUN sudo apt-get update -yqq
