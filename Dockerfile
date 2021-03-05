@@ -2,8 +2,7 @@
 # docker run --rm -it --cpus 4 --memory 2g -v ${PWD}:/$(basename ${PWD}) -v ~/.aws:/root/.aws -v ~/.m2:/root/.m2 -v ~/.ssh:/root/.ssh -v ~/.gitconfig:/root/.gitconfig -v /var/run/docker.sock:/var/run/docker.sock -v ~/.kube:/root/.kube $(basename ${PWD}):local [ commands ]
 # docker run --rm -it --cpus 4 --memory 2g -v ${PWD}:/$(basename ${PWD}) -v ${PWD}/../vek-ftr-framework-lib:/vek-ftr-framework-lib -v ${PWD}/../cvd-android-sec:/cvd-android-sec --workdir /$(basename ${PWD}) $(basename ${PWD}):local [ commands ]
 
-# FROM cirrusci/flutter:1.17.5
-FROM cirrusci/flutter:1.20.3
+FROM cirrusci/flutter:1.22.4
 
 # ENV ANDROID_BUILD_TOOLS_VERSION="29.0.3"
 # ENV ANDROID_HOME="/opt/android-sdk-linux"
